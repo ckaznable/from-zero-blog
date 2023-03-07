@@ -13,7 +13,7 @@ timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://ckaznable.github.io/from-zero-blog
+url: https://zero.ckaznable.com/
 permalink: /:title/
 permalink_defaults:
 pretty_urls:
