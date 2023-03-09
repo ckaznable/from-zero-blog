@@ -1,7 +1,7 @@
 ---
 title: 從零開始的Javascript
 date: 2023-03-09 19:45:07
-tags:
+tags: javascript, browser
 ---
 
 ## 什麼是 JavaScript？
