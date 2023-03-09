@@ -3,4 +3,5 @@ https://zero.ckaznable.com/javascript/
 https://zero.ckaznable.com/python/
 https://zero.ckaznable.com/
 https://zero.ckaznable.com/tags/git/
+https://zero.ckaznable.com/tags/javascript-browser/
 https://zero.ckaznable.com/tags/python/
