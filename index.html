@@ -120,12 +120,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">標籤</span>
       </div>
   </nav>
@@ -142,6 +142,162 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zero.ckaznable.com/docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CKR">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="從零開始的R">
+      <meta itemprop="description" content="各種從零開始教學">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 從零開始的R">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/docker/" class="post-title-link" itemprop="url">從零開始的Docker</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-03-10 19:56:49 / 修改時間：20:05:33" itemprop="dateCreated datePublished" datetime="2023-03-10T19:56:49+08:00">2023-03-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Docker 是一種輕量級的虛擬化技術，可用於打包、分發和運行應用程序。本指南將介紹 Docker 的基本概念，並向您展示如何在本地機器上安裝和運行 Docker。</p>
+<h2 id="Docker-基礎概念"><a href="#Docker-基礎概念" class="headerlink" title="Docker 基礎概念"></a>Docker 基礎概念</h2><h3 id="映像檔（Image）"><a href="#映像檔（Image）" class="headerlink" title="映像檔（Image）"></a>映像檔（Image）</h3><p>映像檔是 Docker 的核心概念之一，它是一個只讀模板，可用於創建容器。映像檔可以包含完整的操作系統、應用程序和任何所需的依賴項。</p>
+<p>您可以從 Docker 機器上下載現有的映像檔，也可以使用 Dockerfile 創建自己的映像檔。Dockerfile 是一種文本文件，其中包含創建映像檔所需的所有指令。</p>
+<h3 id="容器（Container）"><a href="#容器（Container）" class="headerlink" title="容器（Container）"></a>容器（Container）</h3><p>容器是由映像檔創建的可執行實例。容器包含一個完整的運行環境，包括操作系統、應用程序和所有依賴項。每個容器都是獨立且隔離的，可以在其中運行應用程序，而不會影響主機系統或其他容器。</p>
+<p>容器可以啟動、停止、刪除和修改。例如，您可以將容器鏈接到其他容器或外部網絡，以實現通信。</p>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><p>Dockerfile 是一種用於創建映像檔的文本文件。它包含創建映像檔所需的所有指令，例如將文件複製到容器中、安裝軟件包和設置環境變數。</p>
+<p>以下是一個簡單的 Dockerfile 的範例：</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> ubuntu:latest</span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> apt-get update &amp;&amp; apt-get install -y python3</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> my_app.py /</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [ <span class="string">&quot;python3&quot;</span>, <span class="string">&quot;./my_app.py&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
+
+
+<p>這個 Dockerfile 創建了一個基於 Ubuntu 最新版本的映像檔，安裝了 Python 3，將 my_app.py 文件從主機複製到容器中，然後運行 my_app.py。</p>
+<h2 id="安裝-Docker"><a href="#安裝-Docker" class="headerlink" title="安裝 Docker"></a>安裝 Docker</h2><p>以下是在不同操作系統上安裝 Docker 的步驟：</p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>在 Windows 上安裝 Docker，請依照以下步驟進行：</p>
+<ol>
+<li>下載 Docker Desktop for Windows 安裝程式。</li>
+<li>運行安裝程式，按照提示進行安裝。</li>
+<li>安裝完成</li>
+</ol>
+<h3 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h3><p>在 macOS 上安裝 Docker，請依照以下步驟進行：</p>
+<ol>
+<li>下載 Docker Desktop for Mac 安裝程式。</li>
+<li>運行安裝程式，按照提示進行安裝。</li>
+<li>安裝完成</li>
+</ol>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>在 Linux 上安裝 Docker，請依照以下步驟進行：</p>
+<ol>
+<li>使用以下命令更新包列表：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安裝 Docker 所需的依賴項：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>將 Docker 的官方 GPG 金鑰添加到系統：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>添加 Docker 的 APT 存儲庫：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>使用以下命令安裝 Docker：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-Docker"><a href="#使用-Docker" class="headerlink" title="使用 Docker"></a>使用 Docker</h2><p>安裝完成後，您可以使用以下命令來運行 Docker：</p>
+<ol>
+<li>下載映像檔：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull image_name</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>創建容器：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker create --name container_name image_name</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>啟動容器：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>停止容器：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop container_name</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>刪除容器：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm container_name</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>列出所有容器：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>列出所有映像檔：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>以上就是從零開始的 Docker 入門指南。希望對您有所幫助！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -179,9 +335,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2023-03-09 19:45:07 / 修改時間：20:01:53" itemprop="dateCreated datePublished" datetime="2023-03-09T19:45:07+08:00">2023-03-09</time>
+      <time title="創建時間：2023-03-09 19:45:07" itemprop="dateCreated datePublished" datetime="2023-03-09T19:45:07+08:00">2023-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-03-10 20:05:33" itemprop="dateModified" datetime="2023-03-10T20:05:33+08:00">2023-03-10</time>
     </span>
 
   
@@ -284,7 +446,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-03-09 20:01:53" itemprop="dateModified" datetime="2023-03-09T20:01:53+08:00">2023-03-09</time>
+      <time title="修改時間：2023-03-10 20:05:33" itemprop="dateModified" datetime="2023-03-10T20:05:33+08:00">2023-03-10</time>
     </span>
 
   
@@ -436,7 +598,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-03-09 20:01:53" itemprop="dateModified" datetime="2023-03-09T20:01:53+08:00">2023-03-09</time>
+      <time title="修改時間：2023-03-10 20:05:33" itemprop="dateModified" datetime="2023-03-10T20:05:33+08:00">2023-03-10</time>
     </span>
 
   
