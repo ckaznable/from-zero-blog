@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zero.ckaznable.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前置知識在學習 React 前，建議先掌握 HTML、CSS 和基本的 JavaScript。 從零開始的Javascript 從零開始的NPM React 是什麼?React 是一個由 Facebook 開發的 JavaScript 函式庫，用於構建用戶界面。它使得開發者能夠創建可重複使用的 UI 元件，並將其與其他元件組合，從而構建複雜的用戶界面。 React 使用了一個稱為 Virtual">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從零開始的React">
+<meta property="og:url" content="https://zero.ckaznable.com/react/index.html">
+<meta property="og:site_name" content="從零開始的指南">
+<meta property="og:description" content="前置知識在學習 React 前，建議先掌握 HTML、CSS 和基本的 JavaScript。 從零開始的Javascript 從零開始的NPM React 是什麼?React 是一個由 Facebook 開發的 JavaScript 函式庫，用於構建用戶界面。它使得開發者能夠創建可重複使用的 UI 元件，並將其與其他元件組合，從而構建複雜的用戶界面。 React 使用了一個稱為 Virtual">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-11T12:39:58.000Z">
+<meta property="article:modified_time" content="2023-03-12T00:38:30.132Z">
+<meta property="article:author" content="CKR">
+<meta property="article:tag" content="javascript, typescript, npm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zero.ckaznable.com/react/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://zero.ckaznable.com/react/","path":"/react/","title":"從零開始的React"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>從零開始的React | 從零開始的指南</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PW6JBQXML"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-9PW6JBQXML","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">從零開始的指南</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">各種從零開始教學</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AD%98"><span class="nav-number">1.</span> <span class="nav-text">前置知識</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-%E6%98%AF%E4%BB%80%E9%BA%BC"><span class="nav-number">2.</span> <span class="nav-text">React 是什麼?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-React"><span class="nav-number">3.</span> <span class="nav-text">安裝 React</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%80%8B-React-%E7%B5%84%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">第一個 React 組件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useState"><span class="nav-number">5.</span> <span class="nav-text">useState</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useEffect"><span class="nav-number">6.</span> <span class="nav-text">useEffect</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useRef"><span class="nav-number">7.</span> <span class="nav-text">useRef</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">8.</span> <span class="nav-text">總結</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">CKR</p>
+  <div class="site-description" itemprop="description">各種從零開始教學</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://zero.ckaznable.com/react/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CKR">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="從零開始的指南">
+      <meta itemprop="description" content="各種從零開始教學">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="從零開始的React | 從零開始的指南">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          從零開始的React
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-03-11 20:39:58" itemprop="dateCreated datePublished" datetime="2023-03-11T20:39:58+08:00">2023-03-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-03-12 08:38:30" itemprop="dateModified" datetime="2023-03-12T08:38:30+08:00">2023-03-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="前置知識"><a href="#前置知識" class="headerlink" title="前置知識"></a>前置知識</h2><p>在學習 React 前，建議先掌握 HTML、CSS 和基本的 JavaScript。</p>
+<p><a href="./javascript">從零開始的Javascript</a></p>
+<p><a href="./npm">從零開始的NPM</a></p>
+<h2 id="React-是什麼"><a href="#React-是什麼" class="headerlink" title="React 是什麼?"></a>React 是什麼?</h2><p>React 是一個由 Facebook 開發的 JavaScript 函式庫，用於構建用戶界面。它使得開發者能夠創建可重複使用的 UI 元件，並將其與其他元件組合，從而構建複雜的用戶界面。</p>
+<p>React 使用了一個稱為 Virtual DOM（虛擬 DOM）的技術，它使得應用程序在操作真實 DOM 時更加高效。在 React 中，當 UI 組件的狀態（state）發生變化時，React 會將新的狀態與先前的狀態進行比較，然後只更新需要更新的部分。</p>
+<h2 id="安裝-React"><a href="#安裝-React" class="headerlink" title="安裝 React"></a>安裝 React</h2><p>在使用 React 之前，需要先安裝 Node.js 環境。可以在 Node.js 官網（<a target="_blank" rel="noopener" href="https://nodejs.org/%EF%BC%89%E4%B8%8B%E8%BC%89%E5%AE%89%E8%A3%9D%E3%80%82">https://nodejs.org/）下載安裝。</a></p>
+<p>安裝完成後，可以使用 Node.js 自帶的 npm（Node.js 包管理器）來安裝 React。在命令行中輸入以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react react-dom</span><br></pre></td></tr></table></figure>
+
+<h2 id="第一個-React-組件"><a href="#第一個-React-組件" class="headerlink" title="第一個 React 組件"></a>第一個 React 組件</h2><p>React 中的 UI 組件是 JavaScript 函式或類別，可以返回用於渲染到頁面上的 HTML 元素。</p>
+<p>以下是一個簡單的 React 函式組件：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">HelloWorld</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello &#123;props.name&#125;!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這個組件可以通過將屬性傳遞給它來渲染：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>(<span class="language-xml"><span class="tag">&lt;<span class="name">HelloWorld</span> <span class="attr">name</span>=<span class="string">&quot;John&quot;</span> /&gt;</span></span>, <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>在這個示例中，我們在 <code>ReactDOM.render</code> 函式中傳遞了一個組件 <code>&lt;HelloWorld&gt;</code> 和一個 DOM 元素作為參數，這將使組件渲染到頁面上。</p>
+<p>當 React 遇到一個組件時，它會創建一個 React 元素，其中包含了組件的屬性和任何內部子組件。然後，React 將這些元素轉換為實際的 DOM 元素，並將其添加到頁面上。</p>
+<h2 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h2><p><code>useState</code>是React提供的一個Hooks，它用於在React函數組件中添加狀態（state）。使用<code>useState</code>能夠讓函數組件也能夠擁有狀態，並且在狀態改變時重新渲染組件。</p>
+<p>使用<code>useState</code>的步驟如下：</p>
+<p>在函數組件中引入<code>useState</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>useState</code>定義狀態變數以及修改狀態的函數：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>上面的代碼定義了一個狀態變數count，初始值為0，以及一個修改狀態的函數<code>setCount</code>。注意，<code>useState</code>返回一個數組，第一個元素是狀態變數的初始值，第二個元素是修改狀態的函數。</p>
+<p>使用狀態變數：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>You clicked &#123;count&#125; times<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;</span></span><br><span class="line"><span class="language-xml">      Click me</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的代碼中，我們使用了狀態變數<code>count</code>，並且在點擊按鈕時調用<code>setCount</code>函數來修改狀態。</p>
+<p>使用<code>useState</code>的好處在於能夠讓函數組件也能夠擁有狀態，並且在狀態改變時重新渲染組件。這使得我們能夠更加靈活地設計React應用程序，並且能夠更好地管理組件狀態。</p>
+<h2 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h2><p><code>useEffect</code> 是 React Hooks 中非常重要的一個函數，可以用來處理 Component 的副作用。副作用指的是在渲染時對外部環境的讀寫操作，例如發送網絡請求、設置計時器、手動修改DOM等。 <code>useEffect</code> 的作用是讓 React 可以在渲染之後進行一些額外的操作，同時保證這些操作不會影響到渲染的結果。</p>
+<p>使用 <code>useEffect</code> 的基本語法如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 副作用操作</span></span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Component content here<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在這個例子中， <code>useEffect</code> 接收一個回調函數作為參數，這個回調函數在 Component 每次渲染時都會執行。在這個回調函數中，可以進行一些副作用操作，例如發送網絡請求、設置計時器、手動修改DOM等。當然，也可以在回調函數中返回一個清除函數，這個清除函數在 Component 卸載時會自動調用，以清理副作用操作產生的資源。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState, useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">`You clicked <span class="subst">$&#123;count&#125;</span> times`</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;React App&#x27;</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [count]);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>You clicked &#123;count&#125; times<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在這個例子中，我們透過 <code>useEffect</code> 設置了一個副作用操作，當 count 狀態發生變化時，這個副作用操作會被執行。在副作用操作中，我們通過 document.title 修改了網頁標題。同時，我們也在副作用操作的返回值中定義了一個清除函數，在 Component 卸載時自動調用，將網頁標題恢復成默認值。</p>
+<p><code>useEffect</code> 的第二個參數可以用來限制副作用操作的執行。這個參數是一個陣列，包含了所有需要監聽的變數。當其中任意一個變數發生變化時，<code>useEffect</code>會重新執行一次並且清掉上一次的副作用</p>
+<p>當使用 <code>useEffect</code> 時，有幾個重要的注意事項：</p>
+<ol>
+<li><p><code>useEffect</code> 的第一個參數是一個函數，它包含所有需要進行的副作用。</p>
+</li>
+<li><p>如果第二個參數是一個空陣列，那麼這個 <code>useEffect</code> 函數只會在組件首次渲染時執行，並且不會再重新執行。</p>
+</li>
+<li><p>如果第二個參數是一個包含了值的陣列，那麼 <code>useEffect</code> 函數只有在這些值改變時才會重新執行。</p>
+</li>
+<li><p>如果 <code>useEffect</code> 函數返回了一個函數，那麼這個函數會在下一次重新執行或卸載時執行，進行清理操作。</p>
+</li>
+</ol>
+<h2 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h2><p><code>useRef</code> 是 React hooks 中提供的一種 hook，主要用於保存一個可變的值，並在整個 React 组件的生命週期中保持持久性。</p>
+<p>使用 <code>useRef</code> 前，需要先引入 <code>useRef</code>：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRef &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>接著，可以使用 useRef 創建一個 ref 對象：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ref = <span class="title function_">useRef</span>(initialValue);</span><br></pre></td></tr></table></figure>
+
+<p><code>initialValue</code> 是 ref 的初始值，可以是任何值，包括 <code>null</code>、<code>undefined</code>、數字、對象等。</p>
+<p><code>useRef</code> 返回一個對象，其中包含一個屬性 current，該屬性將一直持有著傳入 <code>useRef</code> 的初始值。</p>
+<p>下面是一個簡單的範例，展示如何使用 <code>useRef</code>：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRef &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">TextInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">handleClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">    inputRef.<span class="property">current</span>.<span class="title function_">focus</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Focus<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在這個範例中，我們使用 <code>useRef</code> 創建了一個 ref 對象 inputRef，然後將這個對象傳遞給了一個 input 元素的 ref 屬性中。</p>
+<p>在 <code>handleClick</code> 函數中，我們使用 inputRef.current 來獲取 input 元素的 DOM 對象，然後調用其 focus 方法，將焦點聚焦到 input 元素上。</p>
+<p>這個範例展示了 <code>useRef</code> 最基本的用法，當然，<code>useRef</code> 還有更多的用途，例如：</p>
+<ol>
+<li><p>記錄上一次渲染時某個值</p>
+</li>
+<li><p>在 <code>useEffect</code> 中保存一個不需要觸發重新渲染的變量</p>
+</li>
+<li><p>在自定義 Hook 中保存一些內部狀態</p>
+</li>
+</ol>
+<p>總之，<code>useRef</code> 是一個非常有用的 React hooks，可以讓我們在 React 組件中方便地保存一些狀態，提高組件的可讀性和可維護性。</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>在本文中，我們介紹了 React 的核心概念和基本使用方法，包括 JSX 語法、元件、狀態管理等。並且講解了 <code>useState</code>、<code>useEffect</code> 和 <code>useRef</code> 這些常用的 React Hook，以及如何使用它們來進行狀態管理和資料讀寫等操作。</p>
+<p>React 是一個非常強大且受歡迎的前端框架，它提供了豐富的生態系統和廣泛的應用場景。學習 React 可以讓開發者更高效地開發出複雜的前端應用程式，也能夠提升開發效率和程式品質。</p>
+<p>希望本文能夠對初學者有所幫助，讓大家更快地上手 React 的學習，並且能夠應用到實際開發中。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript-typescript-npm/" rel="tag"># javascript, typescript, npm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/coding/" rel="prev" title="從零開始的程式設計">
+                  <i class="fa fa-chevron-left"></i> 從零開始的程式設計
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CKR</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
