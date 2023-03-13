@@ -4,7 +4,7 @@
   <url>
     <loc>https://zero.ckaznable.com/coding/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://zero.ckaznable.com/docker/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>https://zero.ckaznable.com/git/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>https://zero.ckaznable.com/javascript/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>https://zero.ckaznable.com/npm/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
   <url>
     <loc>https://zero.ckaznable.com/python/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +58,16 @@
   <url>
     <loc>https://zero.ckaznable.com/react/</loc>
     
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zero.ckaznable.com/typescript/</loc>
+    
+    <lastmod>2023-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +76,7 @@
 
   <url>
     <loc>https://zero.ckaznable.com/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,49 +84,56 @@
   
   <url>
     <loc>https://zero.ckaznable.com/tags/coding/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zero.ckaznable.com/tags/docker-cicd-devops/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zero.ckaznable.com/tags/git/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zero.ckaznable.com/tags/javascript-browser/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zero.ckaznable.com/tags/npm-javascript/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zero.ckaznable.com/tags/python/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zero.ckaznable.com/tags/javascript-typescript-npm/</loc>
-    <lastmod>2023-03-12</lastmod>
+    <lastmod>2023-03-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zero.ckaznable.com/tags/javascript-typescript/</loc>
+    <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

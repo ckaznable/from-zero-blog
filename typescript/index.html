@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zero.ckaznable.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="如果您想要開始學習 TypeScript，請確保您已經具備以下環境：  JavaScript 知識: 從零開始的Javascript Node.js 環境與 npm 套件管理系統: 從零開始的NPM  以下是一個從零開始學習 TypeScript 的步驟： 安裝 TypeScript首先，您需要在電腦上安裝 TypeScript。您可以使用以下 npm 命令進行安裝： 1npm install -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從零開始的Typescript">
+<meta property="og:url" content="https://zero.ckaznable.com/typescript/index.html">
+<meta property="og:site_name" content="從零開始的指南">
+<meta property="og:description" content="如果您想要開始學習 TypeScript，請確保您已經具備以下環境：  JavaScript 知識: 從零開始的Javascript Node.js 環境與 npm 套件管理系統: 從零開始的NPM  以下是一個從零開始學習 TypeScript 的步驟： 安裝 TypeScript首先，您需要在電腦上安裝 TypeScript。您可以使用以下 npm 命令進行安裝： 1npm install -">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-13T09:07:32.000Z">
+<meta property="article:modified_time" content="2023-03-13T11:57:22.479Z">
+<meta property="article:author" content="CKR">
+<meta property="article:tag" content="javascript, typescript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zero.ckaznable.com/typescript/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://zero.ckaznable.com/typescript/","path":"/typescript/","title":"從零開始的Typescript"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>從零開始的Typescript | 從零開始的指南</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PW6JBQXML"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-9PW6JBQXML","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">從零開始的指南</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">各種從零開始教學</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-TypeScript"><span class="nav-number">1.</span> <span class="nav-text">安裝 TypeScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%B5%E5%BB%BA-TypeScript-%E6%AA%94%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">創建 TypeScript 檔案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B7%A8%E8%AD%AF-TypeScript-%E6%AA%94%E6%A1%88"><span class="nav-number">3.</span> <span class="nav-text">編譯 TypeScript 檔案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%B7%E8%A1%8C-JavaScript-%E6%AA%94%E6%A1%88"><span class="nav-number">4.</span> <span class="nav-text">執行 JavaScript 檔案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">TypeScript基本語法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%8A%E6%95%B8%E5%AE%A3%E5%91%8A"><span class="nav-number">5.1.</span> <span class="nav-text">變數宣告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B8%E5%AE%A3%E5%91%8A"><span class="nav-number">5.2.</span> <span class="nav-text">函數宣告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E9%9D%A2"><span class="nav-number">5.3.</span> <span class="nav-text">介面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%9E"><span class="nav-number">5.4.</span> <span class="nav-text">類</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF%E6%B3%9B%E5%9E%8B%EF%BC%9F"><span class="nav-number">6.1.</span> <span class="nav-text">什麼是泛型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%9B%E5%9E%8B"><span class="nav-number">6.2.</span> <span class="nav-text">使用泛型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B%E9%A1%9E%E5%88%A5"><span class="nav-number">6.3.</span> <span class="nav-text">泛型類別</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%9A%E8%88%89-Enum"><span class="nav-number">7.</span> <span class="nav-text">枚舉(Enum)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">8.</span> <span class="nav-text">總結</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">CKR</p>
+  <div class="site-description" itemprop="description">各種從零開始教學</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://zero.ckaznable.com/typescript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CKR">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="從零開始的指南">
+      <meta itemprop="description" content="各種從零開始教學">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="從零開始的Typescript | 從零開始的指南">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          從零開始的Typescript
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-03-13 17:07:32 / 修改時間：19:57:22" itemprop="dateCreated datePublished" datetime="2023-03-13T17:07:32+08:00">2023-03-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>如果您想要開始學習 TypeScript，請確保您已經具備以下環境：</p>
+<ol>
+<li>JavaScript 知識: <a href="./javascript">從零開始的Javascript</a></li>
+<li>Node.js 環境與 npm 套件管理系統: <a href="./npm">從零開始的NPM</a></li>
+</ol>
+<p>以下是一個從零開始學習 TypeScript 的步驟：</p>
+<h2 id="安裝-TypeScript"><a href="#安裝-TypeScript" class="headerlink" title="安裝 TypeScript"></a>安裝 TypeScript</h2><p>首先，您需要在電腦上安裝 TypeScript。您可以使用以下 npm 命令進行安裝：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure>
+
+<h2 id="創建-TypeScript-檔案"><a href="#創建-TypeScript-檔案" class="headerlink" title="創建 TypeScript 檔案"></a>創建 TypeScript 檔案</h2><p>接下來，讓我們創建一個 TypeScript 檔案。假設我們要創建一個名為 hello.ts 的檔案。</p>
+<ol>
+<li><p>在您想要創建 TypeScript 檔案的目錄中，創建一個名為 hello.ts 的檔案。</p>
+</li>
+<li><p>在 hello.ts 檔案中，輸入以下程式碼：</p>
+</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params">name: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello, <span class="subst">$&#123;name&#125;</span>!`</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">myName</span>: <span class="built_in">string</span> = <span class="string">&quot;TypeScript&quot;</span>;</span><br><span class="line"><span class="title function_">sayHello</span>(myName);</span><br></pre></td></tr></table></figure>
+
+<p>這裡，我們創建了一個 <code>sayHello</code> 函數，它將一個名稱作為引數並輸出 <code>Hello, &#123;name&#125;!</code> 字串。接著，我們創建了一個 <code>myName</code> 變數，它是一個字串型別並被賦值為 “TypeScript”。最後，我們呼叫了 <code>sayHello</code> 函數並傳遞 <code>myName</code> 作為引數。</p>
+<h2 id="編譯-TypeScript-檔案"><a href="#編譯-TypeScript-檔案" class="headerlink" title="編譯 TypeScript 檔案"></a>編譯 TypeScript 檔案</h2><p>接下來，我們需要將 TypeScript 檔案編譯成 JavaScript 檔案。</p>
+<ol>
+<li><p>在命令列中，切換到 hello.ts 檔案所在的目錄。</p>
+</li>
+<li><p>輸入以下命令以編譯 TypeScript 檔案：</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc hello.ts</span><br></pre></td></tr></table></figure>
+
+<p>這將會使用 TypeScript 編譯器編譯 hello.ts 檔案並產生一個名為 hello.js 的 JavaScript 檔案。</p>
+<h2 id="執行-JavaScript-檔案"><a href="#執行-JavaScript-檔案" class="headerlink" title="執行 JavaScript 檔案"></a>執行 JavaScript 檔案</h2><p>現在，我們已經將 TypeScript 檔案編譯成 JavaScript 檔案。接下來，讓我們執行 hello.js 檔案。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node hello.js</span><br></pre></td></tr></table></figure>
+
+<p>這將會執行 <code>hello.js</code> 檔案並輸出 Hello, TypeScript! 字串。</p>
+<h2 id="TypeScript基本語法"><a href="#TypeScript基本語法" class="headerlink" title="TypeScript基本語法"></a>TypeScript基本語法</h2><h3 id="變數宣告"><a href="#變數宣告" class="headerlink" title="變數宣告"></a>變數宣告</h3><p>在TypeScript中，可以使用<code>let</code>和<code>const</code>聲明變數，用法和JavaScript一樣。不同之處在於，TypeScript會根據變數的初始值來推斷變數的類型。如果變數沒有初始值，則需要指定變數的類型。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">number</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="attr">b</span>: <span class="built_in">string</span> = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> c = <span class="literal">true</span>; <span class="comment">// TypeScript會自動推斷c的類型為boolean</span></span><br><span class="line"><span class="keyword">let</span> d; <span class="comment">// TypeScript無法推斷d的類型，需要手動指定</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函數宣告"><a href="#函數宣告" class="headerlink" title="函數宣告"></a>函數宣告</h3><p>在TypeScript中，可以使用function關鍵字聲明函數。需要指定函數的參數類型和返回值類型。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a: <span class="built_in">number</span>, b: <span class="built_in">number</span></span>): <span class="built_in">number</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果函數沒有返回值，可以指定返回值類型為<code>void</code>。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">log</span>(<span class="params">message: <span class="built_in">string</span></span>): <span class="built_in">void</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="介面"><a href="#介面" class="headerlink" title="介面"></a>介面</h3><p>在TypeScript中，可以使用介面來定義物件的形狀。介面定義了物件的屬性和方法，但沒有具體的實現。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">  <span class="attr">age</span>: <span class="built_in">number</span>;</span><br><span class="line">  <span class="title function_">sayHello</span>(): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用介面來聲明一個物件時，需要符合介面的形狀。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">person</span>: <span class="title class_">Person</span> = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Tom&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">  <span class="attr">sayHello</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, my name is &quot;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="類"><a href="#類" class="headerlink" title="類"></a>類</h3><p>在TypeScript中，可以使用類來創建物件。類是一個模板，用來創建具有相同屬性和方法的物件。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">name: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, my name is &quot;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用類來創建一個物件時，需要使用new關鍵字。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> dog = <span class="keyword">new</span> <span class="title class_">Animal</span>(<span class="string">&quot;Dog&quot;</span>);</span><br><span class="line">dog.<span class="title function_">sayHello</span>(); <span class="comment">// Hello, my name is Dog</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h3 id="什麼是泛型？"><a href="#什麼是泛型？" class="headerlink" title="什麼是泛型？"></a>什麼是泛型？</h3><p>泛型（Generics）是指在定義函式、介面或類別時，不指定特定的型別，而是使用一個參數來表示型別，使得這些定義能夠支援多種型別。通過泛型，我們可以寫出更加通用、靈活的程式碼。</p>
+<p>例如，我們定義一個函式 <code>identity</code>，該函式返回傳入的值：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">identity</span>(<span class="params">value: <span class="built_in">any</span></span>): <span class="built_in">any</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這個函式看似沒有問題，但是它的參數型別和返回值型別都是 any，這意味著我們不能獲取到這個值的任何有用資訊。因此，我們需要使用泛型來指定型別。</p>
+<h3 id="使用泛型"><a href="#使用泛型" class="headerlink" title="使用泛型"></a>使用泛型</h3><p>在 TypeScript 中，可以使用 <code>&lt;T&gt;</code> 來表示泛型型別參數，其中 T 可以是任意名稱，表示任意型別。例如，我們可以將上面的 <code>identity</code> 函式改寫為泛型函式：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> identity&lt;T&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這樣，我們就可以在調用 <code>identity</code> 函式時指定其返回值的型別：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = identity&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;Hello, world!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在這個例子中，我們將泛型參數 T 指定為 <code>string</code>，表示 <code>identity</code> 函式返回的值的型別為 <code>string</code>。因此，變數 <code>result</code> 的型別也是 <code>string</code>。</p>
+<h3 id="泛型類別"><a href="#泛型類別" class="headerlink" title="泛型類別"></a>泛型類別</h3><p>除了泛型函式外，我們還可以使用泛型來定義類別。例如，下面是一個使用泛型的 <code>Pair</code> 類別：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Pair</span>&lt;T, U&gt; &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"><span class="keyword">public</span> first: T, <span class="keyword">public</span> second: U</span>) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這個類別可以用來表示兩個值的組合。其中的 <code>T</code> 和 <code>U</code> 分別表示第一個值和第二個值的型別。我們可以在創建對象時指定這兩個型別：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pair = <span class="keyword">new</span> <span class="title class_">Pair</span>&lt;<span class="built_in">number</span>, <span class="built_in">string</span>&gt;(<span class="number">1</span>, <span class="string">&#x27;hello&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在這個例子中，我們將 <code>T</code> 指定為 number，<code>U</code> 指定為 string，表示 pair 對象的第一個值的型別為 number，第二個值的型別為 string。</p>
+<h2 id="枚舉-Enum"><a href="#枚舉-Enum" class="headerlink" title="枚舉(Enum)"></a>枚舉(Enum)</h2><p>枚舉（Enum）是 <code>TypeScript</code> 中的一種數據類型，用於定義一些具有名字的常量集合。枚舉類型通過列舉所有可能的值來限制變量的取值範圍，從而增強程序的可讀性和可維護性。</p>
+<p>在 <code>TypeScript</code> 中，使用關鍵字 <code>enum</code> 來定義枚舉類型。以下是一個示例：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Color</span> &#123;</span><br><span class="line">  <span class="title class_">Red</span>,</span><br><span class="line">  <span class="title class_">Green</span>,</span><br><span class="line">  <span class="title class_">Blue</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的程式碼定義了一個名為 <code>Color</code> 的枚舉類型，其中包含了三個可能的取值 Red、Green 和 Blue。默認情況下，枚舉類型的值從 0 開始依次遞增，所以 Red 的值為 0，Green 的值為 1，Blue 的值為 2。</p>
+<p>除了默認的數字值外，枚舉類型還可以手動賦值。以下是一個手動賦值的示例：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Color</span> &#123;</span><br><span class="line">  <span class="title class_">Red</span> = <span class="number">1</span>,</span><br><span class="line">  <span class="title class_">Green</span> = <span class="number">2</span>,</span><br><span class="line">  <span class="title class_">Blue</span> = <span class="number">4</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的程式碼中，枚舉值 Red 被手動賦值為 1，Green 被賦值為 2，Blue 被賦值為 4。這里手動賦值的好處是可以保證每個枚舉值的取值唯一性，避免了可能出現的錯誤。</p>
+<p>枚舉類型可以作為函數參數和返回值的類型，也可以作為類的屬性類型。以下是一個枚舉作為類屬性類型的示例：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Color</span> &#123;</span><br><span class="line">  <span class="title class_">Red</span> = <span class="number">1</span>,</span><br><span class="line">  <span class="title class_">Green</span> = <span class="number">2</span>,</span><br><span class="line">  <span class="title class_">Blue</span> = <span class="number">4</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="title class_">Color</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">color: Color</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">color</span> = color;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myCar = <span class="keyword">new</span> <span class="title class_">Car</span>(<span class="title class_">Color</span>.<span class="property">Green</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myCar.<span class="property">color</span>); <span class="comment">// 输出 2</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的程式碼中，<code>Car</code> 類中的 color 屬性的類型被定義為 Color 枚舉類型。在創建 <code>myCar</code> 實例時，我們將枚舉值 Green 作為參數傳遞給構造函數，從而將車的顏色設置為綠色。</p>
+<p>總的來說，枚舉類型是 <code>TypeScript</code> 中非常實用的一種數據類型，可以使程式更易讀、易維護，減少程式碼中的錯誤和冗余。</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p><code>TypeScript</code> 是一種靜態型別的程式語言，它是 <code>JavaScript</code> 的超集合，增加了強大的型別系統，使得程式碼更加健壯且易於維護。</p>
+<p>總體來說，<code>TypeScript</code> 的學習曲線相對於 <code>JavaScript</code> 來說較為陡峭，但學習 <code>TypeScript</code> 可以使得我們開發出更加健壯、可靠的前端應用。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript-typescript/" rel="tag"># javascript, typescript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/react/" rel="prev" title="從零開始的React">
+                  <i class="fa fa-chevron-left"></i> 從零開始的React
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CKR</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
