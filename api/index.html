@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zero.ckaznable.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="什麼是API？API全名為Application Programming Interface，中文為應用程式介面，是不同軟體系統之間溝通的橋樑，提供了一種標準的接口供開發者進行軟體的互動。API可以透過定義方法，指令和協定的方式，使得不同的軟體可以互相溝通、交換資訊、共享資源。 API的種類API大致可以分成三種類型：  開放式API：對外公開，任何人都可以使用，例如：Google Maps AP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從零開始的API">
+<meta property="og:url" content="https://zero.ckaznable.com/api/index.html">
+<meta property="og:site_name" content="從零開始的指南">
+<meta property="og:description" content="什麼是API？API全名為Application Programming Interface，中文為應用程式介面，是不同軟體系統之間溝通的橋樑，提供了一種標準的接口供開發者進行軟體的互動。API可以透過定義方法，指令和協定的方式，使得不同的軟體可以互相溝通、交換資訊、共享資源。 API的種類API大致可以分成三種類型：  開放式API：對外公開，任何人都可以使用，例如：Google Maps AP">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-14T11:09:09.000Z">
+<meta property="article:modified_time" content="2023-03-14T11:15:38.200Z">
+<meta property="article:author" content="CKR">
+<meta property="article:tag" content="api">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zero.ckaznable.com/api/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://zero.ckaznable.com/api/","path":"/api/","title":"從零開始的API"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>從零開始的API | 從零開始的指南</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PW6JBQXML"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-9PW6JBQXML","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">從零開始的指南</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">各種從零開始教學</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFAPI%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什麼是API？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API%E7%9A%84%E7%A8%AE%E9%A1%9E"><span class="nav-number">2.</span> <span class="nav-text">API的種類</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API%E7%9A%84%E5%8D%94%E5%AE%9A"><span class="nav-number">3.</span> <span class="nav-text">API的協定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API%E7%9A%84%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87"><span class="nav-number">4.</span> <span class="nav-text">API的設計原則</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API%E7%9A%84%E9%96%8B%E7%99%BC%E6%B5%81%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">API的開發流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2API"><span class="nav-number">6.</span> <span class="nav-text">部署API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%B2%E7%AB%AF%E6%9C%8D%E5%8B%99"><span class="nav-number">6.1.</span> <span class="nav-text">雲端服務</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9B%E6%93%AC%E4%B8%BB%E6%A9%9F"><span class="nav-number">6.2.</span> <span class="nav-text">虛擬主機</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8"><span class="nav-number">6.3.</span> <span class="nav-text">容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">7.</span> <span class="nav-text">總結</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">CKR</p>
+  <div class="site-description" itemprop="description">各種從零開始教學</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://zero.ckaznable.com/api/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CKR">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="從零開始的指南">
+      <meta itemprop="description" content="各種從零開始教學">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="從零開始的API | 從零開始的指南">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          從零開始的API
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-03-14 19:09:09 / 修改時間：19:15:38" itemprop="dateCreated datePublished" datetime="2023-03-14T19:09:09+08:00">2023-03-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="什麼是API？"><a href="#什麼是API？" class="headerlink" title="什麼是API？"></a>什麼是API？</h2><p>API全名為Application Programming Interface，中文為應用程式介面，是不同軟體系統之間溝通的橋樑，提供了一種標準的接口供開發者進行軟體的互動。API可以透過定義方法，指令和協定的方式，使得不同的軟體可以互相溝通、交換資訊、共享資源。</p>
+<h2 id="API的種類"><a href="#API的種類" class="headerlink" title="API的種類"></a>API的種類</h2><p>API大致可以分成三種類型：</p>
+<ol>
+<li><p>開放式API：對外公開，任何人都可以使用，例如：Google Maps API，Facebook API等等。</p>
+</li>
+<li><p>內部API：只供內部系統使用，例如：企業內部管理系統的API。</p>
+</li>
+<li><p>第三方API：由第三方提供的API，例如：支付系統的API，社交媒體的API等等。</p>
+</li>
+</ol>
+<h2 id="API的協定"><a href="#API的協定" class="headerlink" title="API的協定"></a>API的協定</h2><p>API的協定通常使用HTTP協定，通過HTTP請求（Request）和HTTP響應（Response）進行資訊的傳輸。</p>
+<p>常見的HTTP請求方式有：</p>
+<ul>
+<li>GET：用於讀取資料。</li>
+<li>POST：用於新增資料。</li>
+<li>PUT：用於修改資料。</li>
+<li>DELETE：用於刪除資料。</li>
+</ul>
+<h2 id="API的設計原則"><a href="#API的設計原則" class="headerlink" title="API的設計原則"></a>API的設計原則</h2><ul>
+<li>簡單易用：API設計應該易於理解和使用。</li>
+<li>可靠性：API必須保證穩定和可靠，並且有良好的錯誤處理機制。</li>
+<li>安全性：API必須保證資訊的安全性，防止未授權的存取。</li>
+<li>擴展性：API應該具有擴展性，以便在未來需要添加新功能時能夠輕鬆進行擴展。</li>
+<li>可測試性：API應該易於測試，並且提供充足的測試工具。</li>
+</ul>
+<h2 id="API的開發流程"><a href="#API的開發流程" class="headerlink" title="API的開發流程"></a>API的開發流程</h2><p>API的開發流程大致如下：</p>
+<ol>
+<li>確定API的功能和目標。</li>
+<li>設計API的資料格式，例如：JSON格式。</li>
+<li>設計API的URL和HTTP請求方式，例如：GET、POST、PUT、DELETE等等。</li>
+<li>設計API的響應內容，例如：HTTP狀態碼、資料格式等等。</li>
+<li>實現API的功能。</li>
+<li>測試API的功能和可靠性。</li>
+<li>文檔化API，提供清楚的文件。</li>
+</ol>
+<h2 id="部署API"><a href="#部署API" class="headerlink" title="部署API"></a>部署API</h2><p>當你完成開發並且通過了所有測試，就可以將API部署到生產環境中供用戶使用了。以下是一些部署API的方法：</p>
+<h3 id="雲端服務"><a href="#雲端服務" class="headerlink" title="雲端服務"></a>雲端服務</h3><p>許多雲端服務提供商（如AWS、Azure、Google Cloud等）都提供了部署API的解決方案。你可以使用它們提供的服務（如AWS Lambda、Azure Functions等）來部署API。</p>
+<h3 id="虛擬主機"><a href="#虛擬主機" class="headerlink" title="虛擬主機"></a>虛擬主機</h3><p>如果你有自己的服務器，你可以使用虛擬主機來部署API。虛擬主機是在一個物理服務器上分割出來的多個虛擬環境，每個虛擬環境都可以運行自己的應用程序。</p>
+<h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><p>容器是一種虛擬化技術，它可以將應用程序及其所有相關組件打包在一個容器中。你可以使用Docker等容器化平台來部署API。</p>
+<p>這部分可參考 <a href="./docker">從零開始的Docker</a></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>在這篇教程中，我們學習了如何創建一個簡單的RESTful API，使用了Node.js和Express框架。我們學習了如何設置路由、處理請求和響應、驗證輸入、使用中間件、連接到數據庫等等。</p>
+<p>開發一個API需要非常細心和耐心，需要儘可能多地測試和驗證。在開發完成後，要確保API的性能、可靠性和安全性。最後，你可以使用上述提到的部署方法之一，將API部署到生產環境中供用戶使用。</p>
+<p>希望這篇教程能夠幫助你入門API開發。如果你有任何問題或建議，歡迎在下面留言。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/api/" rel="tag"># api</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/typescript/" rel="prev" title="從零開始的Typescript">
+                  <i class="fa fa-chevron-left"></i> 從零開始的Typescript
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CKR</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

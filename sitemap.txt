@@ -6,7 +6,9 @@ https://zero.ckaznable.com/npm/
 https://zero.ckaznable.com/python/
 https://zero.ckaznable.com/react/
 https://zero.ckaznable.com/typescript/
+https://zero.ckaznable.com/api/
 https://zero.ckaznable.com/
+https://zero.ckaznable.com/tags/api/
 https://zero.ckaznable.com/tags/coding/
 https://zero.ckaznable.com/tags/docker-cicd-devops/
 https://zero.ckaznable.com/tags/git/
