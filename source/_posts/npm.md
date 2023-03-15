@@ -1,7 +1,7 @@
 ---
 title: 從零開始的NPM
 date: 2023-03-10 20:37:53
-tags: npm, javascript
+tags: npm javascript
 ---
 
 ## 什麼是 npm？

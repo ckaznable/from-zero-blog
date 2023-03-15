@@ -1,7 +1,7 @@
 ---
 title: 從零開始的Typescript
 date: 2023-03-13 17:07:32
-tags: javascript, typescript
+tags: javascript typescript
 ---
 
 如果您想要開始學習 TypeScript，請確保您已經具備以下環境：

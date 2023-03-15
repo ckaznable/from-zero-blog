@@ -1,7 +1,7 @@
 ---
 title: 從零開始的React
 date: 2023-03-11 20:39:58
-tags: javascript, typescript, npm
+tags: javascript typescript npm
 ---
 
 ## 前置知識

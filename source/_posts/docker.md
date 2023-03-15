@@ -1,7 +1,7 @@
 ---
 title: 從零開始的Docker
 date: 2023-03-10 19:56:49
-tags: docker, cicd, devops
+tags: docker cicd devops
 ---
 
 Docker 是一種輕量級的虛擬化技術，可用於打包、分發和運行應用程序。本指南將介紹 Docker 的基本概念，並向您展示如何在本地機器上安裝和運行 Docker。
