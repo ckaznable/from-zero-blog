@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zero.ckaznable.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Serverless 架構是一種不需要管理伺服器的應用程式開發方式，開發者可以專注在開發應用程式本身，而不是伺服器和基礎設施的管理上。這種架構主要是使用雲端運算平台提供的服務，這些服務能夠自動擴展、自動調整資源、高可用性等等，使用者只需要根據需求支付使用費用即可。 本篇文章將從基本概念、使用情境、實踐方法等方面介紹 Serverless 的基礎知識。 基本概念Serverless 是指在應用程式開">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從零開始的Serverless">
+<meta property="og:url" content="https://zero.ckaznable.com/severless/index.html">
+<meta property="og:site_name" content="從零開始的指南">
+<meta property="og:description" content="Serverless 架構是一種不需要管理伺服器的應用程式開發方式，開發者可以專注在開發應用程式本身，而不是伺服器和基礎設施的管理上。這種架構主要是使用雲端運算平台提供的服務，這些服務能夠自動擴展、自動調整資源、高可用性等等，使用者只需要根據需求支付使用費用即可。 本篇文章將從基本概念、使用情境、實踐方法等方面介紹 Serverless 的基礎知識。 基本概念Serverless 是指在應用程式開">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-16T13:11:36.000Z">
+<meta property="article:modified_time" content="2023-03-16T13:16:07.564Z">
+<meta property="article:author" content="CKR">
+<meta property="article:tag" content="cicd">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zero.ckaznable.com/severless/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://zero.ckaznable.com/severless/","path":"/severless/","title":"從零開始的Serverless"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>從零開始的Serverless | 從零開始的指南</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PW6JBQXML"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-9PW6JBQXML","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">從零開始的指南</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">各種從零開始教學</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">使用情境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">3.</span> <span class="nav-text">總結</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">CKR</p>
+  <div class="site-description" itemprop="description">各種從零開始教學</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://zero.ckaznable.com/severless/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CKR">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="從零開始的指南">
+      <meta itemprop="description" content="各種從零開始教學">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="從零開始的Serverless | 從零開始的指南">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          從零開始的Serverless
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-03-16 21:11:36 / 修改時間：21:16:07" itemprop="dateCreated datePublished" datetime="2023-03-16T21:11:36+08:00">2023-03-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Serverless 架構是一種不需要管理伺服器的應用程式開發方式，開發者可以專注在開發應用程式本身，而不是伺服器和基礎設施的管理上。這種架構主要是使用雲端運算平台提供的服務，這些服務能夠自動擴展、自動調整資源、高可用性等等，使用者只需要根據需求支付使用費用即可。</p>
+<p>本篇文章將從基本概念、使用情境、實踐方法等方面介紹 Serverless 的基礎知識。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>Serverless 是指在應用程式開發中，不需要關注基礎架構（硬體、作業系統等），直接開發應用程式即可。使用 Serverless 開發，開發者將雲端運算平台提供的各種服務當成基礎設施，如計算、存儲、網路、資料庫、安全等，可以輕鬆構建出高效、安全、擴展性強的應用程式。</p>
+<p>Serverless 架構主要有以下優點：</p>
+<ul>
+<li>無需管理伺服器和基礎設施，開發者能夠專注於開發和創新。</li>
+<li>付費模式靈活，使用者可以按需付費，避免了浪費資源和成本。</li>
+<li>自動擴展和自動調整資源，可以更好地應對流量高峰和低谷的情況。</li>
+<li>高可用性和容錯性，保證了應用程式的穩定運行。</li>
+<li>提供了各種服務，如資料庫、網路、計算、安全等，可以輕鬆地整合使用。</li>
+</ul>
+<p>但 Serverless 架構也存在著一些缺點：</p>
+<ul>
+<li>不適合長時間執行的應用程式，如大規模資料分析、影片轉碼等。</li>
+<li>可能存在延遲和不穩定性問題，因為服務是由雲端平台提供，並且不可控。</li>
+<li>可能存在安全風險，如資料外洩、攻擊等問題。</li>
+</ul>
+<h2 id="使用情境"><a href="#使用情境" class="headerlink" title="使用情境"></a>使用情境</h2><ul>
+<li>輕量級應用程序：Serverless 可以輕松地用於構建小型應用程序，如個人博客、簡單的 API 和微服務等。</li>
+<li>前端應用程序：可以將前端應用程序與 Serverless 結合使用，以提供後端功能，如表單提交、用戶身份驗證、圖像處理等。</li>
+<li>自動化：Serverless 可以用於構建自動化工作流，如數據處理、文件轉換和圖像處理等。</li>
+<li>IOT 應用程序：Serverless 可以用於構建 IOT 應用程序，如物聯網傳感器數據分析、設備狀態監控和遠程控制等。</li>
+<li>事件驅動型應用程序：Serverless 可以用於構建事件驅動型應用程序，如應用程序監控、日志分析和實時數據處理等。</li>
+</ul>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>總之，Serverless 技術可以在需要大量的可伸縮性和高可用性的應用場景下使用。同時，它也非常適合那些需要開發簡單、小規模的應用程序或服務的開發者。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/cicd/" rel="tag"># cicd</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/frontend-framwork/" rel="prev" title="從零開始的前端框架選擇">
+                  <i class="fa fa-chevron-left"></i> 從零開始的前端框架選擇
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CKR</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
