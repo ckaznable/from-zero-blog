@@ -1,5 +1,3 @@
-https://zero.ckaznable.com/severless/
-https://zero.ckaznable.com/typescript/
 https://zero.ckaznable.com/api/
 https://zero.ckaznable.com/coding/
 https://zero.ckaznable.com/docker/
@@ -9,6 +7,8 @@ https://zero.ckaznable.com/javascript/
 https://zero.ckaznable.com/npm/
 https://zero.ckaznable.com/python/
 https://zero.ckaznable.com/react/
+https://zero.ckaznable.com/severless/
+https://zero.ckaznable.com/typescript/
 https://zero.ckaznable.com/
 https://zero.ckaznable.com/tags/api/
 https://zero.ckaznable.com/tags/coding/
